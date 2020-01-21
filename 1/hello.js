@@ -6,10 +6,8 @@ var age = currentYear - myBirthYear;
 
 if (age < 20) {
   alert('Привет, ' + mySurname + ' ' + myName + '!');
-}
-else if (age >= 20 && age < 40) {
+} else if (age >= 20 && age < 40) {
   alert('Добрый день, ' + mySurname + ' ' + myName + '!');
-}
-else {
+} else {
   alert('Здравствуйте, ' + mySurname + ' ' + myName);
 }
