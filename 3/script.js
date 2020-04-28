@@ -1,13 +1,13 @@
 'use strict';
 
-let botNumber = getRandomNumber();
+const botNumber = getRandomInt(100);
 compareNumbers(botNumber);
 
-function getRandomNumber() {
-  return Math.random();
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
-function checkNumber(number) {
+function isNumber(number) {
   return !isNaN( parseFloat(number) ) && isFinite(number);
 }
 
@@ -17,7 +17,7 @@ function getUserNumber() {
   if (userNumber === null) {
     return null;
   } else {
-    while ( !checkNumber(userNumber) ) {
+    while ( !isNumber(userNumber) ) {
       alert(`Вы ввели не число или пустую строку, введите число`);
       userNumber = prompt(`Введите число`);
     }
@@ -28,24 +28,37 @@ function getUserNumber() {
 function compareNumbers(botNumber) {
   let userNumber = getUserNumber();
 
-  switch (userNumber) {
-    case null:
-      alert(`Компьютер победил Вас! До встречи!`)
-      break
-  
-    default:
-      if ( userNumber > botNumber ) {
-        alert(`Вы ввели число ` + userNumber + `, и оно больше, чем задумал робот, попробуйте ещё раз`);
-        compareNumbers(botNumber);
-      }
-    
-      if ( (userNumber < botNumber) ) {
-        alert(`Вы ввели число ` + userNumber + `, и оно меньше, чем задумал робот, попробуйте ещё раз`);
-        compareNumbers(botNumber);
-      }
-    
-      if ( userNumber === botNumber ) {
-        alert(`Числа равны! Поздравляем, Вы угадали!`)
-      }
+  if ( userNumber === null) {
+    alert(`Компьютер победил Вас! До встречи!`)
+  } else if ( userNumber > botNumber ) {
+    alert(`Вы ввели число ` + userNumber + `, и оно больше, чем задумал робот, попробуйте ещё раз`);
+    compareNumbers(botNumber);
+  } else if ( (userNumber < botNumber) ) {
+    alert(`Вы ввели число ` + userNumber + `, и оно меньше, чем задумал робот, попробуйте ещё раз`);
+    compareNumbers(botNumber);
+  } else if ( userNumber === botNumber ) {
+    alert(`Числа равны! Поздравляем!`)
   }
 }
+
+
+  // switch (userNumber) {
+  //   case null:
+  //     alert(`Компьютер победил Вас! До встречи!`)
+  //     break
+  
+  //   default:
+  //     if ( userNumber > botNumber ) {
+  //       alert(`Вы ввели число ` + userNumber + `, и оно больше, чем задумал робот, попробуйте ещё раз`);
+  //       compareNumbers(botNumber);
+  //     }
+    
+  //     if ( (userNumber < botNumber) ) {
+  //       alert(`Вы ввели число ` + userNumber + `, и оно меньше, чем задумал робот, попробуйте ещё раз`);
+  //       compareNumbers(botNumber);
+  //     }
+    
+  //     if ( userNumber === botNumber ) {
+  //       alert(`Числа равны! Поздравляем, Вы угадали!`)
+  //     }
+  // }
