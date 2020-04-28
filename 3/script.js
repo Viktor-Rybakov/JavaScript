@@ -28,15 +28,15 @@ function getUserNumber() {
 function compareNumbers(botNumber) {
   let userNumber = getUserNumber();
 
-  if ( userNumber === null) {
+  if (userNumber === null) {
     alert(`Компьютер победил Вас! До встречи!`)
-  } else if ( userNumber > botNumber ) {
+  } else if (userNumber > botNumber) {
     alert(`Вы ввели число ` + userNumber + `, и оно больше, чем задумал робот, попробуйте ещё раз`);
     compareNumbers(botNumber);
-  } else if ( (userNumber < botNumber) ) {
+  } else if (userNumber < botNumber) {
     alert(`Вы ввели число ` + userNumber + `, и оно меньше, чем задумал робот, попробуйте ещё раз`);
     compareNumbers(botNumber);
-  } else if ( userNumber === botNumber ) {
+  } else if (userNumber === botNumber) {
     alert(`Числа равны! Поздравляем!`)
   }
 }
