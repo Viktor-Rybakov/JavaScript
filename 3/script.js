@@ -29,7 +29,8 @@ function compareNumbers(botNumber) {
   let userNumber = getUserNumber();
 
   if (userNumber === null) {
-    alert(`Компьютер победил Вас! До встречи!`)
+    alert(`Компьютер победил Вас! До встречи!`);
+    return;
   }
 
   if (userNumber > botNumber) {
@@ -43,6 +44,7 @@ function compareNumbers(botNumber) {
   }
 
   if (userNumber === botNumber) {
-    alert(`Числа равны! Поздравляем!`)
+    alert(`Числа равны! Поздравляем!`);
+    return;
   }
 }
