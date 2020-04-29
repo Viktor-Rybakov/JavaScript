@@ -30,35 +30,19 @@ function compareNumbers(botNumber) {
 
   if (userNumber === null) {
     alert(`Компьютер победил Вас! До встречи!`)
-  } else if (userNumber > botNumber) {
+  }
+
+  if (userNumber > botNumber) {
     alert(`Вы ввели число ` + userNumber + `, и оно больше, чем задумал робот, попробуйте ещё раз`);
     compareNumbers(botNumber);
-  } else if (userNumber < botNumber) {
+  }
+
+  if (userNumber < botNumber) {
     alert(`Вы ввели число ` + userNumber + `, и оно меньше, чем задумал робот, попробуйте ещё раз`);
     compareNumbers(botNumber);
-  } else if (userNumber === botNumber) {
+  }
+
+  if (userNumber === botNumber) {
     alert(`Числа равны! Поздравляем!`)
   }
 }
-
-
-  // switch (userNumber) {
-  //   case null:
-  //     alert(`Компьютер победил Вас! До встречи!`)
-  //     break
-  
-  //   default:
-  //     if ( userNumber > botNumber ) {
-  //       alert(`Вы ввели число ` + userNumber + `, и оно больше, чем задумал робот, попробуйте ещё раз`);
-  //       compareNumbers(botNumber);
-  //     }
-    
-  //     if ( (userNumber < botNumber) ) {
-  //       alert(`Вы ввели число ` + userNumber + `, и оно меньше, чем задумал робот, попробуйте ещё раз`);
-  //       compareNumbers(botNumber);
-  //     }
-    
-  //     if ( userNumber === botNumber ) {
-  //       alert(`Числа равны! Поздравляем, Вы угадали!`)
-  //     }
-  // }
