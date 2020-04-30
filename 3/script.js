@@ -1,7 +1,7 @@
 'use strict';
 
-const botNumber = getRandomInt(100);
-compareNumbers(botNumber);
+const BOTNUMBER = getRandomInt(100);
+compareNumbers(BOTNUMBER);
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
