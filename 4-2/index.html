@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 4-2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="main">
+    <form action="" class="form">
+      <fieldset class="form__fieldset">
+        <legend class="form__legend">Введите свой логин и пароль</legend>
+
+        <label for="login" class="form__label">Login:</label>
+        <input type="text" class="form__input js-login" id="login" name="login" placeholder="user">
+
+        <label for="password" class="form__label">Password:</label>
+        <input type="password" class="form__input js-password" id="password" name="password" placeholder="password" minlength="3">
+
+        <button class="form__button js-button" type="button">Войти</button>
+
+      </fieldset>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
