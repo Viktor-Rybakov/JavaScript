@@ -66,21 +66,19 @@ function checkLogin(users, login) {
   for (let i = 0; i < users.length; i++) {
     if (users[i]['login'] === login) {
       return true;
-    } else {
-      return false;
     }
   }
+  return false;
 }
 
 function checkPassword(users, login, password) {
   for (let i = 0; i < users.length; i++) {
     if (  users[i]['login'] === login &&
           users[i]['password'] === password ) {
-            return true;
-    } else {
-      return false;
+      return true;
     }
   }
+  return false;
 }
 
 function getName(users, login) {
@@ -89,6 +87,7 @@ function getName(users, login) {
       return users[i]['name'];
     }
   }
+  return null;
 }
 
 
